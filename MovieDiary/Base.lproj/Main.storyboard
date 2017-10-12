@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5kj-yD-Ip5">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Initial View Controller-->
+        <scene sceneID="l6j-N2-h61">
+            <objects>
+                <viewController id="5kj-yD-Ip5" customClass="InitialViewController" customModule="MovieDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="u19-Yp-JJC"/>
+                        <viewControllerLayoutGuide type="bottom" id="L2h-oL-nNY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xub-Oy-5bs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.002" translatesAutoresizingMaskIntoConstraints="NO" id="wnN-0Y-1be">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Diary" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tmm-Tn-qXc">
+                                <rect key="frame" x="0.0" y="333.5" width="375" height="69"/>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="電影日記" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xn3-fi-6U5">
+                                <rect key="frame" x="96.5" y="278.5" width="181" height="55"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="wnN-0Y-1be" firstAttribute="top" secondItem="Xub-Oy-5bs" secondAttribute="top" id="1Bp-DO-mlE"/>
+                            <constraint firstItem="wnN-0Y-1be" firstAttribute="bottom" secondItem="L2h-oL-nNY" secondAttribute="top" id="B0U-Jz-Sn9"/>
+                            <constraint firstAttribute="trailing" secondItem="wnN-0Y-1be" secondAttribute="trailing" id="JJf-Rq-R5e"/>
+                            <constraint firstItem="Xn3-fi-6U5" firstAttribute="centerX" secondItem="Xub-Oy-5bs" secondAttribute="centerX" id="MJc-5i-x2P"/>
+                            <constraint firstAttribute="trailing" secondItem="Tmm-Tn-qXc" secondAttribute="trailing" id="eu8-Ro-OnM"/>
+                            <constraint firstItem="Tmm-Tn-qXc" firstAttribute="top" secondItem="Xn3-fi-6U5" secondAttribute="bottom" id="h3t-bU-lKi"/>
+                            <constraint firstItem="Xn3-fi-6U5" firstAttribute="bottom" secondItem="Xub-Oy-5bs" secondAttribute="centerY" id="hAe-5R-aef"/>
+                            <constraint firstItem="Tmm-Tn-qXc" firstAttribute="leading" secondItem="Xub-Oy-5bs" secondAttribute="leading" id="hzC-ea-KiG"/>
+                            <constraint firstItem="wnN-0Y-1be" firstAttribute="leading" secondItem="Xub-Oy-5bs" secondAttribute="leading" id="riT-8D-SKW"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OX2-Da-l77" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2984.8000000000002" y="-555.47226386806597"/>
+        </scene>
+        <!--Reveal View Controller-->
+        <scene sceneID="JbX-HN-yYT">
+            <objects>
+                <viewController storyboardIdentifier="initialViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="D5v-pb-hPP" customClass="SWRevealViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zqt-pn-YUk"/>
+                        <viewControllerLayoutGuide type="bottom" id="nEI-5A-FhD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="d9m-cH-MTy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="nEU-0T-F9g" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="sKd-zx-j75"/>
+                        <segue destination="m5o-O3-O89" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="cCk-tl-R2X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ARk-Q8-0IT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2152" y="-555"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="8WE-zv-EDO">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="m5o-O3-O89" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="aFL-G2-vP9">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="JXN-0m-Gtb" kind="relationship" relationship="viewControllers" id="HVO-OT-tu9"/>
+                        <segue destination="FqB-FK-DXB" kind="relationship" relationship="viewControllers" id="P1L-5H-A9T"/>
+                        <segue destination="42G-HD-sgQ" kind="relationship" relationship="viewControllers" id="2Yl-9h-FBg"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Af4-bf-mFs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-916" y="-327"/>
+        </scene>
+        <!--LogInController-->
+        <scene sceneID="civ-Ty-a2x">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="LogInController" storyboardName="RegisterLogIn" referencedIdentifier="LogInController" id="kiG-oa-hAp" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NQ1-8r-mVa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="252" y="440"/>
+        </scene>
+        <!--RegisterController-->
+        <scene sceneID="A6G-rN-Okn">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="RegisterController" storyboardName="RegisterLogIn" referencedIdentifier="RegisterController" id="vds-7b-HRw" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Rv-Ob-iDd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="512" y="440"/>
+        </scene>
+        <!--UIViewController-2vz-6d-tRh-->
+        <scene sceneID="0N1-N1-aKC">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddNewMovie" referencedIdentifier="UIViewController-2vz-6d-tRh" id="FqB-FK-DXB" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="XYr-rY-ty7"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZiR-5c-a5C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-33" y="194"/>
+        </scene>
+        <!--AddTicketController-->
+        <scene sceneID="DmJ-cX-Nkr">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="AddTicketController" storyboardName="AddNewMovie" referencedIdentifier="AddTicketController" id="l0x-1a-eB4" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u55-Dp-Kk5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="804" y="195"/>
+        </scene>
+        <!--AddNewWantWatchedMovieController-->
+        <scene sceneID="SsY-ob-cQn">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="AddNewWantWatchedMovieController" storyboardName="AddNewMovie" referencedIdentifier="AddNewWantWatchedMovieController" id="zOE-IU-oda" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HpW-An-76w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="382" y="194"/>
+        </scene>
+        <!--UINavigationController-K0w-GI-x7b-->
+        <scene sceneID="vP9-0v-RcP">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddFeedBack" referencedIdentifier="UINavigationController-K0w-GI-x7b" id="nEU-0T-F9g" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OOC-td-CRv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1383" y="-1198"/>
+        </scene>
+        <!--FeedBackController-->
+        <scene sceneID="hKQ-sO-ok6">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="FeedBackController" storyboardName="AddFeedBack" referencedIdentifier="FeedBackController" id="ghy-34-uQJ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ksu-Eo-m0y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-917" y="-1198"/>
+        </scene>
+        <!--WantWatchedMovieController-->
+        <scene sceneID="YdW-qf-s0v">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="WantWatchedMovieController" storyboardName="WantWatchMovie" referencedIdentifier="WantWatchedMovieController" id="42G-HD-sgQ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="bCT-qX-CV0"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pcY-DA-cpu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1173.913043478261" y="-555.16304347826087"/>
+        </scene>
+        <!--WatchedMoviesAndTickets-->
+        <scene sceneID="Dbr-ra-OBA">
+            <objects>
+                <viewControllerPlaceholder storyboardName="WatchedMoviesAndTickets" id="JXN-0m-Gtb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="w0u-A0-Ea4"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XSA-oy-Eih" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="915.94202898550736" y="-1258.6956521739132"/>
+        </scene>
+        <!--UIViewController-S5k-hI-ZIq-->
+        <scene sceneID="XRz-Sf-agt">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="UIViewController-S5k-hI-ZIq" storyboardName="EditMovie" referencedIdentifier="UIViewController-S5k-hI-ZIq" id="95M-4R-jyT" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YAW-EI-1zx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2228" y="-1547"/>
+        </scene>
+        <!--editMoviesController-->
+        <scene sceneID="Lqf-ZG-B2k">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="editMoviesController" storyboardName="EditMovie" referencedIdentifier="editMoviesController" id="nUA-K8-EbA" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jRU-Zi-eAe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1651" y="-1546"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background.002" width="1024" height="768"/>
+    </resources>
+</document>
