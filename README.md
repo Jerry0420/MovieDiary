@@ -1,2 +1,0 @@
-# MovieDiary
-MovieDiary
