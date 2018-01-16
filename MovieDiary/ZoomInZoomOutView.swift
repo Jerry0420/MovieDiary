@@ -11,11 +11,9 @@ import Foundation
 class ZoomInZoomOutView{
     
     var startingFrame: CGRect?
-    
     var startingImageView: UIImageView?
-    
     var zoomingImageView : UIImageView?
-    
+    var backgroundClearView = UIView(frame: CGRect.zero)
     var visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .dark))
     
     let feelingTextView: UITextView = {
@@ -58,19 +56,28 @@ class ZoomInZoomOutView{
         zoomingImageView?.isUserInteractionEnabled = true
         zoomingImageView?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleZoomOut)))
         
-        visualEffectView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handlevisualEffectViewZoomOut)))
+//        visualEffectView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handlevisualEffectViewZoomOut)))
+        
+        backgroundClearView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handlevisualEffectViewZoomOut)))
         
         if let keyWindow = UIApplication.shared.keyWindow {
+            
+            backgroundClearView.frame = keyWindow.frame
+            backgroundClearView.backgroundColor = UIColor.clear
             
             visualEffectView.frame = keyWindow.frame
             visualEffectView.alpha = 0
             
             keyWindow.addSubview(visualEffectView)
+            keyWindow.addSubview(backgroundClearView)
             
             keyWindow.addSubview(zoomingImageView!)
             
-            self.visualEffectView.addSubview(self.feelingTextView)
-            self.visualEffectView.addSubview(self.movieNameTextLabel)
+//            self.visualEffectView.addSubview(self.feelingTextView)
+//            self.visualEffectView.addSubview(self.movieNameTextLabel)
+            self.backgroundClearView.addSubview(self.feelingTextView)
+            self.backgroundClearView.addSubview(self.movieNameTextLabel)
+            
             
             UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
                 
@@ -131,6 +138,7 @@ class ZoomInZoomOutView{
     
             self.zoomingImageView?.removeFromSuperview()
             self.visualEffectView.removeFromSuperview()
+            self.backgroundClearView.removeFromSuperview()
             self.startingImageView?.isHidden = false
         })
     }
